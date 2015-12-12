@@ -1,1 +1,1 @@
-win.lua
+win = {}
