@@ -39,6 +39,7 @@ function Player:handleInput(dt)
     end
     if love.keyboard.isDown("up") and not self.onAir then
     	self.onAir = true
+    	jumpSound:play()
         self.b:applyForce(0, -2300)
     end
     if love.keyboard.isDown("down") and self.onAir then

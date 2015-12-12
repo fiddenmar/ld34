@@ -14,15 +14,18 @@ end
 
 function menu:keypressed(key, code)
     if key == 'return' then
+        selectSound:play()
         Gamestate.switch(game)
     end
     if key == 'escape' then
         love.event.quit()
     end
     if key == "right" then
+        selectSound:play()
     	levelNumber = levelNumber+1
     end
     if key == "left" then
+        selectSound:play()
     	levelNumber = levelNumber-1
     end
     if levelNumber < 1 then 

@@ -14,10 +14,12 @@ end
 
 function win:keypressed(key, code)
     if key == 'return' then
+        selectSound:play()
     	levelNumber = levelNumber + 1
         Gamestate.switch(game)
     end
     if key == 'escape' then
+        selectSound:play()
         Gamestate.switch(menu)
     end
 end

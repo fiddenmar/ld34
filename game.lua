@@ -58,6 +58,7 @@ function beginContact(a, b, coll)
 
 	if tileObject:getCategory() == 4 then
 		player.deleting = true
+		deathSound:play()
 	end
 end
  
@@ -122,6 +123,7 @@ end
 function handleInput(dt)
 	player:handleInput(dt)
 	if love.keyboard.isDown("escape") then
+		selectSound:play()
 		Gamestate.switch(menu)
 	end
 end
@@ -129,6 +131,7 @@ end
 function game:keypressed(key)
    if key == "space" or key == " " then
       player.static = true
+      staticSound:play()
    end
 end
 

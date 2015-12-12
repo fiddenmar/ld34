@@ -14,6 +14,7 @@ end
 
 function intro:keypressed(key, code)
     if key == 'return' then
+        selectSound:play()
         Gamestate.switch(menu)
     end
     if key == 'escape' then
