@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm ld34.love
+zip -r ld34.zip *
+mv ld34.zip ld34.love
