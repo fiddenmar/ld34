@@ -13,7 +13,7 @@ game = {}
 
 function game:enter()
 	love.graphics.setBackgroundColor( 0, 0, 0, 255 )
-    map = Loader.load("level1.tmx")
+    map = Loader.load(Globals.getInstance().getLevels()[levelNumber]..".tmx")
 	
 	world = love.physics.newWorld(0, 200, true)
 		world:setCallbacks(beginContact, endContact, preSolve, postSolve)
@@ -54,6 +54,10 @@ function beginContact(a, b, coll)
 
 	if tileObject:getCategory() == 2 then
 		gameWon()
+	end
+
+	if tileObject:getCategory() == 4 then
+		player.deleting = true
 	end
 end
  

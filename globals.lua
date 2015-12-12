@@ -14,6 +14,14 @@ function Globals.getInstance()
         _instance.getTileSize = function()
             return 16
         end
+        _instance.getLevels = function()
+            return {"level1",
+                    "level2",
+                    "level3",
+                    "level4",
+                    "level5"
+                    }
+        end
     end
  
     return _instance

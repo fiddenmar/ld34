@@ -41,6 +41,9 @@ function Player:handleInput(dt)
     	self.onAir = true
         self.b:applyForce(0, -2300)
     end
+    if love.keyboard.isDown("down") and self.onAir then
+        self.b:applyForce(0, 500)
+    end
 end
 
 function Player:draw()

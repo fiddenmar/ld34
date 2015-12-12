@@ -1,7 +1,9 @@
 intro = {}
 
 function intro:enter()
-	love.graphics.setFont(love.graphics.newFont(60))
+	local height = love.graphics.getHeight( )
+	local fontSize = 60 * height / 1200
+	love.graphics.setFont(love.graphics.newFont(fontSize))
 	love.graphics.setBackgroundColor( 77, 166, 75, 255 )
 end
 
